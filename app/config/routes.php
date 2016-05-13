@@ -54,5 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['instagram'] = 'app/instagram';
-$route['f(.*)'] = 'files/file$1';
+// $route['f(.*)'] = 'files/file$1';
 $route['(.*)'] = 'app/index/$1';

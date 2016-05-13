@@ -1,15 +1,24 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class App extends APP_Controller {
+class App extends CI_Controller {
 
 	public function index( $section = 'home' )
 	{
-
+    
     if(!file_exists(APPPATH."views/section/{$section}.php"))
       $section = '404';
-		// $this->lang->load('web');
-		// $this->load->model('DataModel', 'Data');
+    // $this->lang->load('web');
+    // $this->load->model('DataModel', 'Data');
+
+
+    $subsection = false;
+    if($s = $this->uri->segment(2, 0))
+      $subsection = $s;
+
+
+
+    $this->data['subsection'] = $subsection;
     $this->data['section'] = $section;
 
 		$this->load->view("section/{$section}", $this->data);

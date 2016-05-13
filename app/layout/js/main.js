@@ -79,11 +79,20 @@ var ParseContent = function(item){
   if( $('.flexslider', item).length ) {
 
 
-      $('.flexslider', item).flexslider({
-        animation: "slide",
-        start: function() {
-          $('.flexrow > .col.first-col').css('min-height', $('.flexrow > .col.second-col').height() );
-        }
-      });
+    $('.flexslider', item).flexslider({
+      animation: "slide",
+      direction: "horizontal",
+      slideshow: false,
+      start: function() {
+        $('.flexrow > .col.first-col').css('min-height', $('.flexslider').height() );
+        $('.flexslider iframe').css('min-height', $('.flexslider').height() );
+
+        $('.flexslider').imagesLoaded( function() {
+          $('.flexrow > .col.first-col').css('min-height', $('.flexslider').height() );
+          $('.flexslider iframe').css('min-height', $('.flexslider').height() );
+        });
+      }
+    });
   }
 }
+

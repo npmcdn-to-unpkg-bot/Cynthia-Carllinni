@@ -55,6 +55,7 @@ Cynthia Carllini -->
 	 bottom: 0;
 	 left: 0;
 	 right: 0;
+	 overflow: hidden;
 }
 body > .bg {
 	 background-image: url("../img/fondo.jpg");
@@ -96,6 +97,7 @@ header ul li:first-child {
 header ul li.active a {
 	color:#cc3300; 
 }
+header ul li a.active,
 header ul li a:hover{
 	color:#cc3300;
 }
@@ -146,9 +148,9 @@ header .logo{
 .text-bottom h1{
 	color:#333333;
 	font-weight:600;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 17px;
-	margin-bottom: 10px;
+	margin-bottom: 3px;
 	margin-top: 15px;
 }
 
@@ -157,6 +159,9 @@ header .logo{
 	color:#868686;
 }
 
+.text-top {
+	margin-bottom: 45px;
+}
 .text-top p{
 	color:#333333;
 	font-size:14px;
@@ -203,6 +208,12 @@ header .logo{
 	width: 100%;
 	margin: 0 !important;
 }
+.flexslider .slides li {
+	background: rgba(150,150,150,0.2)
+}
+.flexslider iframe {
+	width: 100%;
+}
 .flexrow {
    display: flex;
    	align-items:center;
@@ -226,6 +237,7 @@ header .logo{
 .flex-caption {
 	bottom: 0;
 }
+.flex-caption-gradient,
 .flex-caption-top,
 .flex-caption {
     width: 100%;
@@ -237,14 +249,61 @@ header .logo{
     line-height: 18px;
     position: absolute;
     color: rgba(255,255,255,.5);
+    box-sizing: border-box;
+}
+.flex-caption-gradient {
+    bottom: 0;
+    text-align: right;
+    padding: 5px 20px;
+    right: 0;
+	background: rgba(0,0,0,.2);
 }
 .flex-caption-top {
 	top: 0;
 	color: rgba(255,255,255,1);
 }
 
+.fullpic {
+	width: 100%;
+}
+
 .clear { clear: both; }
 
+.bg-fullpic {
+	z-index: -1;
+	opacity: .5;
+}
+.section-contact {
+	position: relative;
+}
+.contactbox {
+    background: rgba(66, 66, 66, 0.65);
+    position: absolute;
+    color: white;
+    height: 260px;
+    width: 260px;
+    border-radius: 100%;
+    top: calc(50% - 110px);
+    text-align: center;
+    left: calc(50% - 110px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    font-size: 18px;
+}
+.contactbox p {
+    width: 100%;
+    padding: 20px 0;
+}
+.contactbox a {
+    color: white;
+    text-decoration: none;
+}
+.contactbox a:hover {
+	opacity: .5
+}
 @media (max-width: 999px) {
 	#main {
 		width: 100%;
@@ -328,6 +387,20 @@ header .logo{
 	.flexrow > .col.first-col .nav ul li {
 		text-align: left;
 	}
-
+	.contactbox {
+	    background: rgba(66, 66, 66, 0.65);
+	    position: absolute;
+	    width: 100%;
+	    padding: 20px;
+	    border-radius: 0;
+	    top: 0;
+	    text-align: left;
+	    left: 0;
+	    display: block;
+	    font-size: 18px;
+	}
+	.section-contact .fullpic {
+		display: none;
+	}
 }
  

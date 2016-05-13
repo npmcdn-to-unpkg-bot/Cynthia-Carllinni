@@ -4,6 +4,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
   <script src="<?= layout('js/jquery.flexslider.js') ?>"></script>
+  <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
   <script src="<?= layout('js/main.js') ?>"></script>
 
   <script type="text/javascript">
